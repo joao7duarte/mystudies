@@ -1,5 +1,5 @@
 function aceitou () {
-    alert("Agora me passa a senha do seu instagram")
+    alert("entao me leva junto com vc")
 }
 
 const evilButton = document.getElementById('evil-button')
