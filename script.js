@@ -1,5 +1,5 @@
 function aceitou () {
-    alert("entao me leva junto com vc")
+    alert("<3")
 }
 
 const evilButton = document.getElementById('evil-button')
@@ -42,4 +42,5 @@ function distanceFromCenter(boxPosition, mousePosition, boxSize) {
     if (horizontalDistance < offset && verticalDistance < offset) {
         moveButton();
     }
+
 });
