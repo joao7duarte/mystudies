@@ -1,76 +1,76 @@
 
-function pedra () {
+function rock () {
     const randomNumber = Math.random()
     let computerMove = ''
 
         if (randomNumber >= 0 && randomNumber < 1 / 3) {
-          computerMove = 'pedra'
+          computerMove = 'rock'
         } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-            computerMove = 'papel'
+            computerMove = 'paper'
         } else if (randomNumber >= 2 / 3 && randomNumber < 3 / 3) {
-            computerMove = 'tesoura'
+            computerMove = 'scissors'
         }
 
         console.log(computerMove)
         let result = ''
         
-        if (computerMove === 'pedra') {
-            result = 'Empate!'
-        } else if (computerMove === 'papel') {
-            result = 'Você perdeu!'
-        } else if (computerMove === 'tesoura') {
-            result = 'Você ganhou!'
+        if (computerMove === 'rock') {
+            result = 'Tie!'
+        } else if (computerMove === 'paper') {
+            result = 'You lose!'
+        } else if (computerMove === 'scissors') {
+            result = 'You win!'
         }
         
-        alert(`Você jogou pedra. O computador jogou ${computerMove}. ${result}`)
+        alert(`You played rock. Computer played ${computerMove}. ${result}`)
 }
 
-function papel () {
+function paper () {
 randomNumber = Math.random()
      computerMove = ''
         if (randomNumber >= 0 && randomNumber < 1 / 3) {
-          computerMove = 'pedra'
+          computerMove = 'rock'
         } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) 
-            {computerMove = 'papel'
+            {computerMove = 'paper'
         } else if (randomNumber >= 2 / 3 && randomNumber < 3 / 3) {
-            computerMove = 'tesoura'
+            computerMove = 'scissors'
         }
 
         console.log(computerMove)
         result = ''
         
-        if (computerMove === 'pedra') {
-            result = 'Você ganhou!'
-        } else if (computerMove === 'papel') {
-            result = 'Empate!'
-        } else if (computerMove === 'tesoura') {
-            result = 'Você perdeu!'
+        if (computerMove === 'rock') {
+            result = 'You win!'
+        } else if (computerMove === 'paper') {
+            result = 'Tie!'
+        } else if (computerMove === 'scissors') {
+            result = 'You lose!'
         }
         
-        alert(`Você jogou papel. O computador jogou ${computerMove}. ${result}`)
+        alert(`You played paper. Computer played ${computerMove}. ${result}`)
 }
 
-function tesoura () {
+function scissors () {
 randomNumber = Math.random()
      computerMove = ''
         if (randomNumber >= 0 && randomNumber < 1 / 3) {
-          computerMove = 'pedra'
+          computerMove = 'rock'
         } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-            computerMove = 'papel'
+            computerMove = 'paper'
         } else if (randomNumber >= 2 / 3 && randomNumber < 3 / 3) {
-            computerMove = 'tesoura'
+            computerMove = 'scissors'
         }
 
         console.log(computerMove)
         result = ''
         
-        if (computerMove === 'pedra') {
-            result = 'Você perdeu!'
-        } else if (computerMove === 'papel') {
-            result = 'Você ganhou!'
-        } else if (computerMove === 'tesoura') {
-            result = 'Empate!'
+        if (computerMove === 'rock') {
+            result = 'You lose!'
+        } else if (computerMove === 'paper') {
+            result = 'You win!'
+        } else if (computerMove === 'scissors') {
+            result = 'Tie!'
         }
         
-        alert(`Você jogou tesoura. O computador jogou ${computerMove}. ${result}`)
+        alert(`You played scissors. Computer played ${computerMove}. ${result}`)
 }
