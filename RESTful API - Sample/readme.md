@@ -1,56 +1,56 @@
-# API REST de Clientes Fictícios
+# Clients REST API - Sample
 
-Uma API REST simples criada com Node.js e Express, que utiliza um arquivo JSON como base de dados fictícia. A API foi testada e documentada com o Insomnia.
+A simple REST API created with **Node.js** and **Express**, using a JSON file as a fake database. The API was tested and documented with **Insomnia**.
 
-> Observação: Esta API é apenas para testes. As alterações realizadas com POST, PUT e DELETE não são salvas no arquivo data.json e existem apenas em memória durante a execução do servidor.
+> Note: This API is for testing purposes only. Changes made with POST, PUT, and DELETE are not saved to the `data.json` file and exist only in memory while the server is running.
 
 ---
 
-## Tecnologias usadas
+## Technologies Used
 
 * Node.js
 * Express
-* JSON como banco de dados fictício
-* Insomnia para testes de requisições
+* JSON as a fake database
+* Insomnia for request testing
 
 ---
 
-## Estrutura do projeto
+## Project Structure
 
 ```
 .
-├── data.json           # Base de dados fictícia com IDs de clientes
-├── server.js           # Código da API
-├── package.json        # Dependências do projeto
-├── package-lock.json   # Bloqueio de versões de dependências
-├── node_modules/       # Pasta gerada pelo npm com dependências
-└── README.md           # Documentação
+├── data.json           # Fake database with client IDs
+├── server.js           # API code
+├── package.json        # Project dependencies
+├── package-lock.json   # Dependency version lock
+├── node_modules/       # Folder created by npm with dependencies
+└── README.md           # Documentation
 ```
 
 ---
 
-## Como rodar o projeto
+## How to Run the Project
 
-1. Clone o repositório:
+1. Clone the repository:
 
    ```bash
-   git clone <url-do-repo>
-   cd <nome-da-pasta>
+   git clone <repo-url>
+   cd <folder-name>
    ```
 
-2. Instale as dependências:
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-3. Inicie o servidor:
+3. Start the server:
 
    ```bash
    node server.js
    ```
 
-4. Acesse no navegador ou cliente HTTP (Insomnia, Postman, etc.):
+4. Access it in the browser or an HTTP client (Insomnia, Postman, etc.):
 
 ```
 http://localhost:3000
@@ -60,13 +60,13 @@ http://localhost:3000
 
 ## Endpoints
 
-### Listar todos os clientes
+### List all clients
 
 ```http
 GET /clients
 ```
 
-**Resposta:**
+**Response:**
 
 ```json
 [
@@ -75,86 +75,86 @@ GET /clients
 ]
 ```
 
-### Buscar cliente por ID
+### Get client by ID
 
 ```http
 GET /clients/:id
 ```
 
-**Exemplo:**
+**Example:**
 
 ```
 GET /clients/1
 ```
 
-**Resposta:**
+**Response:**
 
 ```json
 { "id": "1", "name": "João", "email": "joao@email.com" }
 ```
 
-### Criar novo cliente
+### Create a new client
 
 ```http
 POST /clients
 ```
 
-**Corpo (JSON):**
+**Body (JSON):**
 
 ```json
 {
-  "name": "Novo Cliente",
-  "email": "novo@email.com"
+  "name": "New Client",
+  "email": "new@email.com"
 }
 ```
 
-**Resposta:**
+**Response:**
 
 ```json
 {
-  "name": "Novo Cliente",
-  "email": "novo@email.com"
+  "name": "New Client",
+  "email": "new@email.com"
 }
 ```
 
-> Observação: O cliente não é realmente adicionado ao data.json, apenas retornado na resposta.
+> Note: The client is not actually added to `data.json`, it is only returned in the response.
 
-### Atualizar cliente por ID
+### Update client by ID
 
 ```http
 PUT /clients/:id
 ```
 
-**Exemplo:**
+**Example:**
 
 ```
 PUT /clients/2
 ```
 
-**Corpo (JSON):**
+**Body (JSON):**
 
 ```json
 {
-  "name": "Maria Atualizada",
-  "email": "maria@novo.com"
+  "name": "Updated Maria",
+  "email": "maria@new.com"
 }
 ```
 
-**Resposta:**
+**Response:**
 
 ```json
-{ "id": "2", "name": "Maria Atualizada", "email": "maria@novo.com" }
+{ "id": "2", "name": "Updated Maria", "email": "maria@new.com" }
 ```
 
-> Observação: A alteração não é persistida, apenas retornada na resposta.
+> Note: The update is not persisted, it is only returned in the response.
 
-### Deletar cliente por ID
+### Delete client by ID
 
 ```http
 DELETE /clients/:id
 ```
 
-**Resposta (lista de clientes filtrada):**
+**Response (filtered clients list):**
 
 ```json
 [
@@ -162,17 +162,17 @@ DELETE /clients/:id
 ]
 ```
 
-> Observação: A remoção não é persistida, apenas retornada na resposta.
+> Note: The deletion is not persisted, it is only returned in the response.
 
 ---
 
-## Testando com Insomnia
+## Testing with Insomnia
 
-1. Abra o Insomnia.
-2. Crie uma nova coleção.
-3. Adicione requisições com os métodos acima (GET, POST, PUT, DELETE).
-4. Configure o body em JSON para as rotas POST e PUT.
+1. Open Insomnia.
+2. Create a new collection.
+3. Add requests using the endpoints above (GET, POST, PUT, DELETE).
+4. Configure the request body in JSON for POST and PUT routes.
 
 ---
 
-Autor: João Gabriel Duarte -- /joao7duarte
+Author: João Gabriel Duarte -- /joao7duarte
